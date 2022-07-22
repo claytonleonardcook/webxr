@@ -34,7 +34,7 @@ const Controller = ({ isRight, isLeft, children }: ControllerProps) => {
     }
   });
 
-  return <mesh>{children}</mesh>;
+  return <mesh ref={controllerRef}>{children}</mesh>;
 };
 
 export default Controller;
