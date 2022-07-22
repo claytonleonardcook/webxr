@@ -8,7 +8,7 @@ function Controllers() {
     <>
       <DefaultXRControllers />
       <Controller isRight>
-        <Flashlight color={0xff0000}/>
+        <Flashlight color={0xff0000} intesity={3}/>
       </Controller>
       <Controller isLeft>
         <Flashlight color={0x0000ff}/>

@@ -4,11 +4,16 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import { Mesh } from "three";
 
-type ControllerProps = {
-  isRight?: boolean;
-  isLeft?: boolean;
-  children?: React.ReactNode;
-};
+type ControllerProps = (
+  | {
+      isRight: boolean;
+      isLeft?: boolean;
+    }
+  | {
+      isRight?: boolean;
+      isLeft: boolean;
+    }
+) & { children?: React.ReactNode };
 
 const Controller = ({ isRight, isLeft, children }: ControllerProps) => {
   const { controllers } = useXR();
